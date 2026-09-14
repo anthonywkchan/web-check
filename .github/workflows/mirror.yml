@@ -8,6 +8,7 @@ on:
     - cron: '30 3 * * 0' # At 03:30 on Sunday
 jobs:
   codeberg:
+    if: github.repository == 'lissy93/web-check'
     runs-on: ubuntu-latest
     steps:
       - uses: lissy93/repo-mirror-action@v1.5.0
